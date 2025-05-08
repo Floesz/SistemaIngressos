@@ -5,9 +5,28 @@
 package entities;
 
 /**
- *
  * @author Guilherme
  */
-public class Meia_Entrada {
-    
+public class Meia_Entrada extends Ingresso {
+
+    private double precoInicial;
+
+    public Meia_Entrada() {
+    }
+
+    public Meia_Entrada(String evento, String data, double precoInicial) {
+        super(evento, data);
+        this.precoInicial = precoInicial;
+    }
+
+    @Override
+    public double calcularValor() {
+        return precoInicial / 2;
+    }
+
+    @Override
+    public String imprimirIngresso() {
+        return "Ingresso Meia Entrada\n Evento:" + evento + "\n Data:" + data + "\n Valor:" + calcularValor();
+    }
+
 }

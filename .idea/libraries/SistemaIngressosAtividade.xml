@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="SistemaIngressosAtividade">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/dist/SistemaIngressosAtividade.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

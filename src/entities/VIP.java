@@ -8,6 +8,29 @@ package entities;
  *
  * @author Guilherme
  */
-public class VIP {
+public class VIP extends Ingresso{
+    
+    private double precoInicial;
+    private double precoAdicionalVIP;
+
+    public VIP() {
+    }
+
+    public VIP(String evento, String data,double precoInicial, double precoAdicionalVIP) {
+        super(evento, data);
+        this.precoInicial = precoInicial;
+        this.precoAdicionalVIP = precoAdicionalVIP;
+    }
+    
+    @Override
+    public double calcularValor(){
+        return precoInicial + precoAdicionalVIP;
+    }
+    
+    @Override
+    public String imprimirIngresso(){
+         return "Ingresso VIP\n Evento:" + evento + "\n Data:" + data + "\n Valor:" + calcularValor();
+    }
+    
     
 }

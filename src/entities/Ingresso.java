@@ -5,9 +5,24 @@
 package entities;
 
 /**
- *
  * @author Guilherme
  */
-public class Ingresso {
-    
+public abstract class Ingresso {
+
+    protected String evento;
+    protected String data;
+
+    public Ingresso(String evento, String data) {
+        this.evento = evento;
+        this.data = data;
+    }
+
+    public Ingresso() {
+
+    }
+
+    public abstract double calcularValor();
+
+    public abstract String imprimirIngresso();
+
 }
